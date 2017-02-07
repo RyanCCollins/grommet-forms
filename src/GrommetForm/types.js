@@ -96,7 +96,12 @@ export type FormFieldType = {
     | TextInputField | SelectField,
 }
 
+type FormPaddingType = 'none' | 'small' | 'medium' | 'large';
 export type FormType = {
   title: string,
+  compact: boolean,
+  onSubmit: Function,
+  plain: boolean,
+  pad: FormPaddingType | { vertical: FormPaddingType, horizontal: FormPaddingType },
   fields: Array<FormFieldType>,
 }

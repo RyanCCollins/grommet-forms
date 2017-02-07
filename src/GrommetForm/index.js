@@ -13,11 +13,12 @@ export default class GrommetForm extends React.Component {
   props: GrommetFormProps;
   render() {
     const { form } = this.props;
+    const { title, fields, ...formProps } = form;
     return (
-      <Form>
+      <Form {...formProps}>
         <fieldset>
-          <legend>{form.title}</legend>
-          <GrommetFormRenderer form={form} />
+          <legend>{title}</legend>
+          <GrommetFormRenderer fields={fields} />
         </fieldset>
       </Form>
     );
