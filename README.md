@@ -89,3 +89,6 @@ import GrommetForm from 'grommet-forms';
 ```
 
 We love JSX, but sometimes you just end up writing too much of it.  The hope with this library is that you will save yourself some keystrokeys.  Pass the form renderer a blob of data describing the hierarchy of your form / fields and get back a rendered form whose state is managed automatically by Redux (or not, that part is up to you!).
+
+## Field Types
+All of the [Grommet form components](https://grommet.github.io/docs/components) are supported.  When you create your field object, set the `type` property to one of the [Grommet Form Field types](https://github.com/RyanCCollins/grommet-forms/blob/master/src/FormFieldMap.js).
