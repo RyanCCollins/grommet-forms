@@ -7,7 +7,7 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    library: 'grommet-cms-content-blocks-brand-central',
+    library: 'grommet-forms',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
