@@ -8,6 +8,7 @@ Forms can often be the most time consuming part of your project.  Tons of state?
 
 Here's an example from a recent project of ours.
 
+// In some reducer in your app
 ```
   sectionLayoutForm: {
     title: "Section Layout",
@@ -79,6 +80,12 @@ Here's an example from a recent project of ours.
       }
     ]
   },
+```
+
+// In your connected component
+```
+import GrommetForm from 'grommet-forms';
+<GrommetForm form={this.props.sectionLayoutForm} />
 ```
 
 We love JSX, but sometimes you just end up writing too much of it.  The hope with this library is that you will save yourself some keystrokeys.  Pass the form renderer a blob of data describing the hierarchy of your form / fields and get back a rendered form whose state is managed automatically by Redux (or not, that part is up to you!).
