@@ -21,7 +21,7 @@ Here's an example from a recent project of ours.
         name: "direction",
         type: "Select",
         value: 'row',
-        props: {
+        fieldProps: {
           options: ["row", "column"],
         }
       },
