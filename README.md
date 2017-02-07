@@ -90,7 +90,7 @@ Here's an example from a recent project of ours.
             "1/3", "2/3",
             "1/4", "3/4"
           ],
-          onSearch: (options, term) => options.filter(i => i.includes(term))
+          onSearch: ({ target }, props) => props.options.filter(i => i.includes(target.value))
         }
       }
     ]
