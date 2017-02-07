@@ -12,11 +12,11 @@ Here's an example from a recent project of ours.
 ```
   sectionLayoutForm: {
     title: "Section Layout",
-    error: null,
     id: 'section-layout-form',
     fields: [
       {
         label: "Flex Direction",
+        error: null,
         help: "How should the content flow?  Row: left to right, Column: top to bottom.",
         name: "direction",
         type: "Select",
@@ -27,6 +27,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: "Justify Content",
+        error: null,
         help: "Justify content to the left / right.",
         name: "justify",
         type: "Select",
@@ -37,6 +38,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: "Align Items",
+        error: null,
         help: "Align items to the top / bottom.",
         name: "align",
         type: "Select",
@@ -47,6 +49,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: "Padding",
+        error: null,
         name: "pad",
         help: "How much space should the container add around content?",
         type: "Select",
@@ -57,6 +60,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: "Full",
+        error: null,
         help: "Should the section span the full width / height of the container.",
         name: "full",
         type: "Select",
@@ -67,6 +71,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: 'Wrap',
+        error: null,
         help: "Should the content ever wrap onto a new line?",
         name: 'wrap',
         type: 'Select',
@@ -77,6 +82,7 @@ Here's an example from a recent project of ours.
       },
       {
         label: "Flex Basis",
+        error: null,
         help: "The basis of inner items.  Prefer setting item size vs. flex-basis.",
         name: "basis",
         type: "Select",
