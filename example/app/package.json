@@ -1,0 +1,40 @@
+{
+  "name": "grommet-cms-content-blocks-example",
+  "version": "1.0.0",
+  "description": "An example for testing the content blocks",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanCCollins/grommet-cms-content-blocks.git"
+  },
+  "keywords": [
+    "grommet",
+    "grommet-cms"
+  ],
+  "author": "Ryan Collins <ryanc.collins@mac.com> (http://github.com/ryanccollins)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyanCCollins/grommet-cms-content-blocks/issues"
+  },
+  "homepage": "https://github.com/RyanCCollins/grommet-cms-content-blocks",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.1",
+    "eslint-plugin-react": "^6.9.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
