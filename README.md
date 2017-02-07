@@ -20,63 +20,77 @@ Here's an example from a recent project of ours.
         help: "How should the content flow?  Row: left to right, Column: top to bottom.",
         name: "direction",
         type: "Select",
-        options: ["row", "column"],
-        value: 'row'
+        value: 'row',
+        props: {
+          options: ["row", "column"],
+        }
       },
       {
         label: "Justify Content",
         help: "Justify content to the left / right.",
         name: "justify",
         type: "Select",
-        options: ["start", "center", "between", "end"],
-        value: 'start'
+        value: 'start',
+        fieldProps: {
+          options: ["start", "center", "between", "end"],
+        }
       },
       {
         label: "Align Items",
         help: "Align items to the top / bottom.",
         name: "align",
         type: "Select",
-        options: ["start", "center", "end", "baseline", "stretch"],
-        value: 'start'
+        value: 'start',
+        fieldProps: {
+          options: ["start", "center", "end", "baseline", "stretch"],
+        }
       },
       {
         label: "Padding",
         name: "pad",
         help: "How much space should the container add around content?",
         type: "Select",
-        options: ["small", "medium", "large", "none"],
-        value: 'small'
+        value: 'small',
+        fieldProps: {
+          options: ["small", "medium", "large", "none"],
+        }
       },
       {
         label: "Full",
         help: "Should the section span the full width / height of the container.",
         name: "full",
         type: "Select",
-        options: ["horizontal", "vertical", "true", "false"],
-        value: 'false'
+        value: 'false',
+        fieldProps: {
+          options: ["horizontal", "vertical", "true", "false"],
+        }
       },
       {
         label: 'Wrap',
         help: "Should the content ever wrap onto a new line?",
         name: 'wrap',
         type: 'Select',
-        options: ["true", "false"],
-        value: 'false'
+        value: 'false',
+        fieldProps: {
+          options: ["true", "false"],
+        }
       },
       {
         label: "Flex Basis",
         help: "The basis of inner items.  Prefer setting item size vs. flex-basis.",
         name: "basis",
         type: "Select",
-        options: [
-          "xsmall", "small",
-          "medium", "large",
-          "xlarge", "xxlarge",
-          "full", "1/2",
-          "1/3", "2/3",
-          "1/4", "3/4"
-        ],
-        value: 'full'
+        value: 'full',
+        fieldProps: {
+          options: [
+            "xsmall", "small",
+            "medium", "large",
+            "xlarge", "xxlarge",
+            "full", "1/2",
+            "1/3", "2/3",
+            "1/4", "3/4"
+          ],
+        }
       }
     ]
   },
@@ -93,4 +107,4 @@ We love JSX, but sometimes you just end up writing too much of it.  The hope wit
 ## Field Types
 All of the Grommet form components are supported.  When you create your field object, set the `type` property to one of the [Grommet Form Field types](https://github.com/RyanCCollins/grommet-forms/blob/master/src/FormFieldMap.js).
 
-Each object in your fields array must contain a `type` and a `value` property.  The rest of the fields in that object are properties.  Refer to the [Grommet Docs website](https://grommet.github.io/docs/components) for a list of supported props.  You can also reference the [source code](https://github.com/RyanCCollins/grommet-forms/blob/master/src/GrommetForm/types.js) to see the PropTypes (Flow Types) that we use internally.
+Each object in your fields array must contain a `type` and a `value` property, along with FormField properties such as `help` and `label`.  The `fieldProps` object can contain any of the props that the field type supports, including functions.  Refer to the [Grommet Docs website](https://grommet.github.io/docs/components) for a list of supported props.  You can also reference the [source code](https://github.com/RyanCCollins/grommet-forms/blob/master/src/GrommetForm/types.js) to see the PropTypes (Flow Types) that we use internally.
