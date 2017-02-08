@@ -1,7 +1,8 @@
+__NOTICE__:
+This library is being actively developed.  Use with caution until a proper release has been published.
+
 # Grommet Forms
 Collection of higher order components for constructing forms with Grommet UX
-
-Coming soon!
 
 # Inspiration
 Forms can often be the most time consuming part of your project.  Tons of state? :check: complex hierarchies of data? Yep, you get the point.  What we found when we were building our forms was that the best method was to render the form from a data structure stored in your state tree and to alter that state through redux.  
