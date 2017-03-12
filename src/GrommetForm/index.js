@@ -10,14 +10,22 @@ type GrommetFormProps = {
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class GrommetForm extends React.Component {
+  static defaultProps: {
+    plain: false,
+    compact: false,
+    onSubmit: () => void,
+    pad: 'none',
+  };
   props: GrommetFormProps;
   render() {
     const { form } = this.props;
     const { title, fields, ...formProps } = form;
     return (
       <Form {...formProps}>
-        <legend>{title}</legend>
-        <GrommetFormRenderer fields={fields} />
+        <fieldset>
+          <legend>{title}</legend>
+          <GrommetFormRenderer fields={fields} />
+        </fieldset>
       </Form>
     );
   }
