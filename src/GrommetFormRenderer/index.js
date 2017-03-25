@@ -17,7 +17,7 @@ export default function GrommetFormRenderer({ fields }: {
         return (
           <FormField key={`grommet-form-field-${item.type}-${i}`} {...formFieldProps}>
             {React.cloneElement(
-              FormFieldMap[item.type].element,
+              FormFieldMap[type].element,
               {
                 ...field,
               },
