@@ -14,10 +14,13 @@ export default function GrommetFormRenderer({ fields }: {
     <span>
       {fields.map((item, i) => {
         const { field, type, ...formFieldProps } = item;
+        const node = typeof type === 'string'
+          ? FormFieldMap[type]
+          : element;
         return (
           <FormField key={`grommet-form-field-${item.type}-${i}`} {...formFieldProps}>
             {React.cloneElement(
-              FormFieldMap[type].element,
+              node,
               {
                 ...field,
               },

@@ -46,3 +46,26 @@ We love JSX, but sometimes you just end up writing too much of it.  The hope wit
 All of the Grommet form components are supported.  When you create your field object, set the `type` property to one of the [Grommet Form Field types](https://github.com/RyanCCollins/grommet-forms/blob/master/src/FormFieldMap.js).
 
 Each object in your fields array must contain a `type` and a `value` property, along with FormField properties such as `help` and `label`.  The `fieldProps` object can contain any of the props that the field type supports, including functions.  Refer to the [Grommet Docs website](https://grommet.github.io/docs/components) for a list of supported props.  You can also reference the [source code](https://github.com/RyanCCollins/grommet-forms/blob/master/src/GrommetForm/types.js) to see the PropTypes (Flow Types) that we use internally.
+
+If you want to use one of the built in form elements, i.e. `input` or `textarea` go right ahead!  Just pass in an element in JSX as the type, as shown below
+```
+export const settingsForm = {
+  // ...
+  fields: [
+    {
+      label: 'Allow Layout',
+      htmlFor: 'layout',
+      type: <input />,
+      error: null,
+      help: 'Should the layout be editable in the cms?',
+      field: {
+        checked: false,
+        onChange: null,
+        id: 'layout',
+        name: 'layout'
+      }
+    }
+  ]
+};
+
+```
